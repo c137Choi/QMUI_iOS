@@ -20,6 +20,10 @@
 #import "QMUIHelper.h"
 #import "NSString+QMUI.h"
 
+// ScreenScale 宏使用了 iOS 26 废弃的 [UIScreen mainScreen]，宏展开处无法用 push/pop 局部屏蔽，
+// 故在此全局关闭该警告（对本头文件之后的所有展开点生效）
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 #pragma mark - 变量-编译相关
 
 /// 判断当前是否debug编译模式
