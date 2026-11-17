@@ -507,41 +507,55 @@ EndIgnoreClangWarning
 - (CGSize)sizeThatFitsInContentView:(CGSize)size {
     __block CGSize result = [self.tableView sizeThatFits:CGSizeMake(size.width, CGFLOAT_MAX)];
     if (self.adjustsWidthAutomatically) {
-        self.tableView.frame = CGRectMakeWithSize(result);
-        [self.tableView layoutIfNeeded];
-        result = CGSizeZero;
-        [self.itemSections enumerateObjectsUsingBlock:^(NSArray<__kindof QMUIPopupMenuItem *> * _Nonnull sectionItems, NSUInteger section, BOOL * _Nonnull aStop) {
-            if (self.sectionTitles.count > section && self.sectionTitles[section].length) {
-                QMUIPopupMenuSectionHeaderView *header = (QMUIPopupMenuSectionHeaderView *)[self.tableView headerViewForSection:section];
-                CGSize headerSize = [header sizeThatFits:CGSizeMake(size.width, CGFLOAT_MAX)];
-                result.height += headerSize.height;
-                result.width = MAX(result.width, MIN(headerSize.width, size.width));
-            }
-            [sectionItems enumerateObjectsUsingBlock:^(__kindof QMUIPopupMenuItem * _Nonnull rowItem, NSUInteger row, BOOL * _Nonnull bStop) {
-                QMUIPopupMenuCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
-                CGSize itemSize = [cell.itemView sizeThatFits:CGSizeMake(size.width, CGFLOAT_MAX)];
-                CGFloat itemHeight = rowItem.height;
-                if (itemHeight < 0) {
-                    itemHeight = self.itemHeight;
+        // 测量宽度前需要把 tableView 临时撑到内容尺寸，让所有 cell 都创建出来；
+        // 但测量时 tableView 可能已经挂在界面上了（例如弹出后 maskView 触发的再次布局），
+        // 改变 frame 会让 UIScrollView 按当前 bounds 自动调整 contentOffset，
+        // 表现为子菜单弹出后列表自动向上滚动、第一项被顶出可视区域。
+        // 测量结束后必须把 frame 和 contentOffset 原样恢复，且整个测量过程禁止动画：
+        // 否则系统对 contentOffset 的这次调整会被弹出动画接管，并持续到动画结束。
+        CGRect tableViewFrame = self.tableView.frame;
+        CGPoint contentOffset = self.tableView.contentOffset;
+        [UIView performWithoutAnimation:^{
+            self.tableView.frame = CGRectMakeWithSize(result);
+            [self.tableView layoutIfNeeded];
+            result = CGSizeZero;
+            [self.itemSections enumerateObjectsUsingBlock:^(NSArray<__kindof QMUIPopupMenuItem *> * _Nonnull sectionItems, NSUInteger section, BOOL * _Nonnull aStop) {
+                if (self.sectionTitles.count > section && self.sectionTitles[section].length) {
+                    QMUIPopupMenuSectionHeaderView *header = (QMUIPopupMenuSectionHeaderView *)[self.tableView headerViewForSection:section];
+                    CGSize headerSize = [header sizeThatFits:CGSizeMake(size.width, CGFLOAT_MAX)];
+                    result.height += headerSize.height;
+                    result.width = MAX(result.width, MIN(headerSize.width, size.width));
                 }
-                // QMUIViewSelfSizingHeight
-                if (isinf(itemHeight)) {
-                    itemHeight = itemSize.height;
-                }
-                if (self.shouldShowItemSeparator) {
-                    itemHeight += self.itemSeparatorHeight;// 每个 section 结尾的那个 item 不需要算分隔线高度，在下文减去
-                }
-                result.height += itemHeight;
-                result.width = MAX(result.width, MIN(itemSize.width, size.width));
+                [sectionItems enumerateObjectsUsingBlock:^(__kindof QMUIPopupMenuItem * _Nonnull rowItem, NSUInteger row, BOOL * _Nonnull bStop) {
+                    QMUIPopupMenuCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+                    CGSize itemSize = [cell.itemView sizeThatFits:CGSizeMake(size.width, CGFLOAT_MAX)];
+                    CGFloat itemHeight = rowItem.height;
+                    if (itemHeight < 0) {
+                        itemHeight = self.itemHeight;
+                    }
+                    // QMUIViewSelfSizingHeight
+                    if (isinf(itemHeight)) {
+                        itemHeight = itemSize.height;
+                    }
+                    if (self.shouldShowItemSeparator) {
+                        itemHeight += self.itemSeparatorHeight;// 每个 section 结尾的那个 item 不需要算分隔线高度，在下文减去
+                    }
+                    result.height += itemHeight;
+                    result.width = MAX(result.width, MIN(itemSize.width, size.width));
+                }];
             }];
+            result.height += (self.itemSections.count - 1) * self.sectionSpacing;
+            if (self.shouldShowSectionSeparator) {
+                result.height += (self.itemSections.count - 1) * self.sectionSeparatorHeight;
+            }
+            if (self.shouldShowItemSeparator) {
+                result.height -= self.itemSections.count * self.itemSeparatorHeight;// 减去每个 section 结尾的那个 item 的分隔线
+            }
+            self.tableView.frame = tableViewFrame;
+            if (!self.tableView.isDragging && !self.tableView.isDecelerating) {
+                self.tableView.contentOffset = contentOffset;
+            }
         }];
-        result.height += (self.itemSections.count - 1) * self.sectionSpacing;
-        if (self.shouldShowSectionSeparator) {
-            result.height += (self.itemSections.count - 1) * self.sectionSeparatorHeight;
-        }
-        if (self.shouldShowItemSeparator) {
-            result.height -= self.itemSections.count * self.itemSeparatorHeight;// 减去每个 section 结尾的那个 item 的分隔线
-        }
     }
     if (self.bottomAccessoryView) {
         CGSize accessoryViewSize = [self.bottomAccessoryView sizeThatFits:CGSizeMake(size.width, CGFLOAT_MAX)];
