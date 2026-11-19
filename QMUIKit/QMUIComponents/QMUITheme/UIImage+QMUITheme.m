@@ -24,7 +24,13 @@
 @interface UIImage ()
 
 @property(nonatomic, assign) BOOL qmui_shouldUseSystemIMP;
+
+@end
+
+@interface UIImage (QMUIThemePrivate)
+
 + (nullable UIImage *)qmui_dynamicImageWithOriginalImage:(UIImage *)image tintColor:(UIColor *)tintColor originalActionBlock:(UIImage * (^)(UIImage *aImage, UIColor *aTintColor))originalActionBlock;
+
 @end
 
 @interface QMUIThemeImageCache : NSCache

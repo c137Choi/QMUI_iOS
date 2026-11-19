@@ -64,22 +64,22 @@ QMUISynthesizeNSIntegerProperty(lastOrientationChangedByHelper, setLastOrientati
         return YES;
     }
     if ((mask & UIInterfaceOrientationMaskAllButUpsideDown) == UIInterfaceOrientationMaskAllButUpsideDown) {
-        return UIInterfaceOrientationPortraitUpsideDown != deviceOrientation;
+        return UIInterfaceOrientationPortraitUpsideDown != (UIInterfaceOrientation)deviceOrientation;
     }
     if ((mask & UIInterfaceOrientationMaskPortrait) == UIInterfaceOrientationMaskPortrait) {
-        return UIInterfaceOrientationPortrait == deviceOrientation;
+        return UIInterfaceOrientationPortrait == (UIInterfaceOrientation)deviceOrientation;
     }
     if ((mask & UIInterfaceOrientationMaskLandscape) == UIInterfaceOrientationMaskLandscape) {
-        return UIInterfaceOrientationLandscapeLeft == deviceOrientation || UIInterfaceOrientationLandscapeRight == deviceOrientation;
+        return UIInterfaceOrientationLandscapeLeft == (UIInterfaceOrientation)deviceOrientation || UIInterfaceOrientationLandscapeRight == (UIInterfaceOrientation)deviceOrientation;
     }
     if ((mask & UIInterfaceOrientationMaskLandscapeLeft) == UIInterfaceOrientationMaskLandscapeLeft) {
-        return UIInterfaceOrientationLandscapeLeft == deviceOrientation;
+        return UIInterfaceOrientationLandscapeLeft == (UIInterfaceOrientation)deviceOrientation;
     }
     if ((mask & UIInterfaceOrientationMaskLandscapeRight) == UIInterfaceOrientationMaskLandscapeRight) {
-        return UIInterfaceOrientationLandscapeRight == deviceOrientation;
+        return UIInterfaceOrientationLandscapeRight == (UIInterfaceOrientation)deviceOrientation;
     }
     if ((mask & UIInterfaceOrientationMaskPortraitUpsideDown) == UIInterfaceOrientationMaskPortraitUpsideDown) {
-        return UIInterfaceOrientationPortraitUpsideDown == deviceOrientation;
+        return UIInterfaceOrientationPortraitUpsideDown == (UIInterfaceOrientation)deviceOrientation;
     }
     
     return YES;
