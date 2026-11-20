@@ -15,9 +15,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUIConsoleToolbar.h"
-#import "QMUIConsoleViewController.h"
-#import "QMUILog+QMUIConsole.h"
+#import <QMUIKit/QMUIConsoleToolbar.h>
+#import <QMUIKit/QMUIConsoleViewController.h>
+#import <QMUIKit/QMUILog+QMUIConsole.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

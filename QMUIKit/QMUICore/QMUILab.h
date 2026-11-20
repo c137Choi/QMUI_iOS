@@ -19,9 +19,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-#import "QMUICommonDefines.h"
-#import "NSNumber+QMUI.h"
-#import "QMUIWeakObjectContainer.h"
+#import <QMUIKit/QMUICommonDefines.h>
+#import <QMUIKit/NSNumber+QMUI.h>
+#import <QMUIKit/QMUIWeakObjectContainer.h>
 
 /**
  以下系列宏用于在 Category 里添加 property 时，可以在 @implementation 里一句代码完成 getter/setter 的声明。暂不支持在 getter/setter 里添加自定义的逻辑，需要自定义的情况请继续使用 Code Snippet 生成的代码。

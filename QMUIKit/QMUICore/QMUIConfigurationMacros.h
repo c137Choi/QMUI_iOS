@@ -13,7 +13,7 @@
 //  Created by QMUI Team on 14-7-2.
 //
 
-#import "QMUIConfiguration.h"
+#import <QMUIKit/QMUIConfiguration.h>
 
 
 /**

@@ -15,12 +15,12 @@
 #ifndef QMUITheme_h
 #define QMUITheme_h
 
-#import "QMUIThemeManagerCenter.h"
-#import "QMUIThemeManager.h"
-#import "UIColor+QMUITheme.h"
-#import "UIImage+QMUITheme.h"
-#import "UIVisualEffect+QMUITheme.h"
-#import "UIView+QMUITheme.h"
-#import "UIViewController+QMUITheme.h"
+#import <QMUIKit/QMUIThemeManagerCenter.h>
+#import <QMUIKit/QMUIThemeManager.h>
+#import <QMUIKit/UIColor+QMUITheme.h>
+#import <QMUIKit/UIImage+QMUITheme.h>
+#import <QMUIKit/UIVisualEffect+QMUITheme.h>
+#import <QMUIKit/UIView+QMUITheme.h>
+#import <QMUIKit/UIViewController+QMUITheme.h>
 
 #endif /* QMUITheme_h */

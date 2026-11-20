@@ -14,8 +14,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUIImagePreviewViewController.h"
-#import "QMUIAsset.h"
+#import <QMUIKit/QMUIImagePreviewViewController.h>
+#import <QMUIKit/QMUIAsset.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

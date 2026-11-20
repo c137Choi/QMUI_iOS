@@ -15,5 +15,5 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUILayouterLinearHorizontal.h"
-#import "QMUILayouterLinearVertical.h"
+#import <QMUIKit/QMUILayouterLinearHorizontal.h>
+#import <QMUIKit/QMUILayouterLinearVertical.h>

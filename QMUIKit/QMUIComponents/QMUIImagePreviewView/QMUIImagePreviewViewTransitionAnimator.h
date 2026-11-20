@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUIImagePreviewViewController.h"
+#import <QMUIKit/QMUIImagePreviewViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

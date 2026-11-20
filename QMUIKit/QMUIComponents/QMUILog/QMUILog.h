@@ -14,9 +14,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QMUILogItem.h"
-#import "QMUILogNameManager.h"
-#import "QMUILogger.h"
+#import <QMUIKit/QMUILogItem.h>
+#import <QMUIKit/QMUILogNameManager.h>
+#import <QMUIKit/QMUILogger.h>
 #import <stdio.h>
 
 /// 以下是 QMUI 提供的用于代替 NSLog() 的打 log 的方法，可根据 logName、logLevel 两个维度来控制某些 log 是否要被打印，以便在调试时去掉不关注的 log。

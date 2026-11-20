@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUIAsset.h"
+#import <QMUIKit/QMUIAsset.h>
 
 @class QMUIButton;
 

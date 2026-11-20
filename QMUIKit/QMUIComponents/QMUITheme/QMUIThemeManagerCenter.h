@@ -13,7 +13,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QMUIThemeManager.h"
+#import <QMUIKit/QMUIThemeManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

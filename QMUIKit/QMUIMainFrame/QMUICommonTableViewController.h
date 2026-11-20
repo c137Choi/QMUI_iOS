@@ -13,8 +13,8 @@
 //  Created by QMUI Team on 14-6-24.
 //
 
-#import "QMUICommonViewController.h"
-#import "QMUITableView.h"
+#import <QMUIKit/QMUICommonViewController.h>
+#import <QMUIKit/QMUITableView.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -14,7 +14,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUIModalPresentationViewController.h"
+#import <QMUIKit/QMUIModalPresentationViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

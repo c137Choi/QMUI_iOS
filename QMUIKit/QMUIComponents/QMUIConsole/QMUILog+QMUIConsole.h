@@ -13,7 +13,7 @@
 //  Created by MoLice on 2019/J/15.
 //
 
-#import "QMUILog.h"
+#import <QMUIKit/QMUILog.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

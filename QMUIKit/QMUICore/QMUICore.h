@@ -13,9 +13,9 @@
 //  Created by QMUI Team on 2017/5/17.
 //
 
-#import "QMUIHelper.h"
-#import "QMUICommonDefines.h"
-#import "QMUIRuntime.h"
-#import "QMUILab.h"
-#import "QMUIConfiguration.h"
-#import "QMUIConfigurationMacros.h"
+#import <QMUIKit/QMUIHelper.h>
+#import <QMUIKit/QMUICommonDefines.h>
+#import <QMUIKit/QMUIRuntime.h>
+#import <QMUIKit/QMUILab.h>
+#import <QMUIKit/QMUIConfiguration.h>
+#import <QMUIKit/QMUIConfigurationMacros.h>

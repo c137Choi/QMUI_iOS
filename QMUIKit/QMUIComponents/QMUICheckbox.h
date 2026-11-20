@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUIButton.h"
+#import <QMUIKit/QMUIButton.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

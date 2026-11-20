@@ -21,7 +21,7 @@
 #import <Photos/PHAssetCollectionChangeRequest.h>
 #import <Photos/PHFetchOptions.h>
 #import <Photos/PHImageManager.h>
-#import "QMUIAssetsGroup.h"
+#import <QMUIKit/QMUIAssetsGroup.h>
 
 @class PHCachingImageManager;
 @class QMUIAsset;

@@ -6,7 +6,7 @@
 //  Copyright © 2023 QMUI Team. All rights reserved.
 //
 
-#import "QMUILabel.h"
+#import <QMUIKit/QMUILabel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

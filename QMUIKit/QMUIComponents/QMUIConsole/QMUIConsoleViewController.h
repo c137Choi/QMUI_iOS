@@ -14,7 +14,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUICommonViewController.h"
+#import <QMUIKit/QMUICommonViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

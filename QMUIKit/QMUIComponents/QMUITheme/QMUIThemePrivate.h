@@ -14,9 +14,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "UIColor+QMUI.h"
-#import "UIImage+QMUITheme.h"
-#import "UIVisualEffect+QMUITheme.h"
+#import <QMUIKit/UIColor+QMUI.h>
+#import <QMUIKit/UIImage+QMUITheme.h>
+#import <QMUIKit/UIVisualEffect+QMUITheme.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

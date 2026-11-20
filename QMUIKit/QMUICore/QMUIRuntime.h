@@ -16,9 +16,9 @@
 #import <objc/runtime.h>
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "NSObject+QMUI.h"
-#import "NSMethodSignature+QMUI.h"
-#import "QMUILog.h"
+#import <QMUIKit/NSObject+QMUI.h>
+#import <QMUIKit/NSMethodSignature+QMUI.h>
+#import <QMUIKit/QMUILog.h>
 
 /// 以高级语言的方式描述一个 objc_property_t 的各种属性，请使用 `+descriptorWithProperty` 生成对象后直接读取对象的各种值。
 @interface QMUIPropertyDescriptor : NSObject

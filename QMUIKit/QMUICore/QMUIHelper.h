@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUICommonDefines.h"
+#import <QMUIKit/QMUICommonDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

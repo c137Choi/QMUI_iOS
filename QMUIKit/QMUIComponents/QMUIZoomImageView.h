@@ -15,7 +15,7 @@
 
 #import <UIKit/UIKit.h>
 #import <PhotosUI/PhotosUI.h>
-#import "QMUIAsset.h"
+#import <QMUIKit/QMUIAsset.h>
 
 @class QMUIZoomImageView;
 @class QMUIEmptyView;

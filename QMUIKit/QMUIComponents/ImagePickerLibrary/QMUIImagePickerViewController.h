@@ -14,10 +14,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUICommonViewController.h"
-#import "QMUIImagePickerPreviewViewController.h"
-#import "QMUIAsset.h"
-#import "QMUIAssetsGroup.h"
+#import <QMUIKit/QMUICommonViewController.h>
+#import <QMUIKit/QMUIImagePickerPreviewViewController.h>
+#import <QMUIKit/QMUIAsset.h>
+#import <QMUIKit/QMUIAssetsGroup.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

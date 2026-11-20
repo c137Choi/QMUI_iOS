@@ -14,7 +14,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUITableViewProtocols.h"
+#import <QMUIKit/QMUITableViewProtocols.h>
 
 @interface QMUITableView : UITableView
 

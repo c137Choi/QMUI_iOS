@@ -51,8 +51,8 @@ onlyfiles = [ f for f in os.listdir(publicHeaderFilePath) if os.path.isfile(os.p
 onlyfiles.sort()
 for filename in onlyfiles:
   if filename != umbrellaHeaderFileName:
-    umbrellaFileContent += '''#if __has_include("%s")
-#import "%s"
+    umbrellaFileContent += '''#if __has_include(<QMUIKit/%s>)
+#import <QMUIKit/%s>
 #endif
 
 ''' % (filename, filename)

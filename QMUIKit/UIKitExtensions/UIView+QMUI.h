@@ -15,7 +15,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "UIView+QMUIBorder.h"
+#import <QMUIKit/UIView+QMUIBorder.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

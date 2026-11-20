@@ -14,7 +14,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIControl+QMUI.h"
+#import <QMUIKit/UIControl+QMUI.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

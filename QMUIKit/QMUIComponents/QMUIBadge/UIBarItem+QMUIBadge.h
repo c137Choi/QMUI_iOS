@@ -15,7 +15,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "QMUIBadgeProtocol.h"
+#import <QMUIKit/QMUIBadgeProtocol.h>
 
 /**
  *  用于在 UIBarButtonItem（通常用于 UINavigationBar 和 UIToolbar）和 UITabBarItem 上显示未读红点或者未读数，对设置的时机没有要求。

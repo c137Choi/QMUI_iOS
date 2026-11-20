@@ -13,7 +13,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUIEasings.h"
+#import <QMUIKit/QMUIEasings.h>
 
 @interface QMUIAnimationHelper : NSObject
 

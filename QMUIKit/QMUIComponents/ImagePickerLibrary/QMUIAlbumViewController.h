@@ -14,9 +14,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUICommonTableViewController.h"
-#import "QMUITableViewCell.h"
-#import "QMUIAssetsGroup.h"
+#import <QMUIKit/QMUICommonTableViewController.h>
+#import <QMUIKit/QMUITableViewCell.h>
+#import <QMUIKit/QMUIAssetsGroup.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -14,8 +14,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUINavigationController.h"
-#import "QMUIKeyboardManager.h"
+#import <QMUIKit/QMUINavigationController.h>
+#import <QMUIKit/QMUIKeyboardManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -15,8 +15,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUIAsset.h"
-#import "QMUIAssetsGroup.h"
+#import <QMUIKit/QMUIAsset.h>
+#import <QMUIKit/QMUIAssetsGroup.h>
 
 /**
  *  配合 QMUIImagePickerViewController 使用的工具类

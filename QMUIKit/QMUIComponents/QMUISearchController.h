@@ -13,8 +13,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUICommonViewController.h"
-#import "QMUICommonTableViewController.h"
+#import <QMUIKit/QMUICommonViewController.h>
+#import <QMUIKit/QMUICommonTableViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

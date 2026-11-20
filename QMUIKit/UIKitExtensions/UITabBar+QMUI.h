@@ -14,7 +14,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUIBarProtocol.h"
+#import <QMUIKit/QMUIBarProtocol.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

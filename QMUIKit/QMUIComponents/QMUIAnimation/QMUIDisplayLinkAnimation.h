@@ -13,7 +13,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUIAnimationHelper.h"
+#import <QMUIKit/QMUIAnimationHelper.h>
 
 #define SpringAnimationDefaultDuration 0.5
 

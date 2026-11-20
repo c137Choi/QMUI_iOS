@@ -17,8 +17,8 @@
 #define QMUICommonDefines_h
 
 #import <UIKit/UIKit.h>
-#import "QMUIHelper.h"
-#import "NSString+QMUI.h"
+#import <QMUIKit/QMUIHelper.h>
+#import <QMUIKit/NSString+QMUI.h>
 
 // ScreenScale 宏使用了 iOS 26 废弃的 [UIScreen mainScreen]，宏展开处无法用 push/pop 局部屏蔽，
 // 故在此全局关闭该警告（对本头文件之后的所有展开点生效）

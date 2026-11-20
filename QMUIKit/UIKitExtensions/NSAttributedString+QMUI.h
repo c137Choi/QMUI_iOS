@@ -15,8 +15,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "QMUIHelper.h"
-#import "NSString+QMUI.h"
+#import <QMUIKit/QMUIHelper.h>
+#import <QMUIKit/NSString+QMUI.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

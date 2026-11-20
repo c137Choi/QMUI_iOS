@@ -14,7 +14,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUIZoomImageView.h"
+#import <QMUIKit/QMUIZoomImageView.h>
 
 @class QMUIImagePreviewView;
 @class QMUICollectionViewPagingLayout;
